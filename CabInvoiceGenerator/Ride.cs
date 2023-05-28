@@ -40,7 +40,4 @@ namespace CabInvoiceGenerator
             throw new NotImplementedException();
         }
     }
-
-    
-   
 }
