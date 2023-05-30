@@ -24,7 +24,8 @@ namespace CabInvoiceGenerator
                 {
                     double totalFair = ride.distance * ride.COST_PER_KM + ride.time * ride.COST_PER_MINUTE;
                     return Math.Max(totalFair, ride.MINIMUM_FAIR);
-                }   
+                }
+                
             }
             catch(NullReferenceException ex)
             {
