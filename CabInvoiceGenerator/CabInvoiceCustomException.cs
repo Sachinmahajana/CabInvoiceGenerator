@@ -15,7 +15,7 @@ namespace CabInvoiceGenerator
             INVALID_TIME,
             EMPTY_RIDE
         }
-        public CabInvoiceCustomException(string message,ExceptionTypes exceptionTypes)
+        public CabInvoiceCustomException(string message,ExceptionTypes exceptionTypes) : base(message)
         {
             this.exceptionTypes = exceptionTypes;
             

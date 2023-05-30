@@ -10,7 +10,6 @@ namespace CabInvoiceGenerator
     {   
         public  double CalculateFair(Ride ride)
         {
-            double totalFair = 0;
             try
             {
                 if (ride.distance < 0)
@@ -23,7 +22,7 @@ namespace CabInvoiceGenerator
                 }
                 else
                 {
-                    totalFair = ride.distance * ride.COST_PER_KM + ride.time * ride.COST_PER_MINUTE;
+                    double totalFair = ride.distance * ride.COST_PER_KM + ride.time * ride.COST_PER_MINUTE;
                     return Math.Max(totalFair, ride.MINIMUM_FAIR);
                 }   
             }
@@ -31,13 +30,14 @@ namespace CabInvoiceGenerator
             {
                 throw new CabInvoiceCustomException("null object", CabInvoiceCustomException.ExceptionTypes.EMPTY_RIDE);  
             }
-        } 
+        }
+
         public double CalculateFair(Ride[] rides)
         {
             double totalFair = 0;
             try
             {
-                foreach(Ride ride in rides)
+                foreach (Ride ride in rides)
                 {
                     totalFair += CalculateFair(ride);
                 }

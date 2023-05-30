@@ -21,20 +21,19 @@ namespace CabInvoiceGenerator
             this.time = time;
             this.rideType = rideType;
 
-            if(RideTypes.NORMAL == rideType)
+            if (RideTypes.NORMAL == rideType)
             {
                 MINIMUM_FAIR = 5;
                 COST_PER_KM = 10;
                 COST_PER_MINUTE = 1;
             }
             else
-            {
+            { 
                 MINIMUM_FAIR = 10;
                 COST_PER_KM = 15;
                 COST_PER_MINUTE = 2;
             }
         }
-
         internal double CalculateFair(Ride ride1, Ride ride2)
         {
             throw new NotImplementedException();
