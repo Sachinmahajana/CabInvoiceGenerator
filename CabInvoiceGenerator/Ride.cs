@@ -19,7 +19,7 @@ namespace CabInvoiceGenerator
         {
             this.distance = distance;
             this.time = time;
-            this.rideType = rideType;
+            this.rideType = ridetype;
 
             if (RideTypes.NORMAL == rideType)
             {
